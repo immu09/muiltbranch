@@ -16,5 +16,11 @@ node('built-in')
 	   stage('Continuous Testing_master')
 		     {
            sh 'echo "Testing Scripts are Passed"'
-            }
+               }
+stage('Continuous Delivery_master') 
+			{
+           sh 'scp  /home/ubuntu/.jenkins/workspace/multibranch_project_master/webapp/target/webapp.war   ubuntu@172.31.47.33:/var/lib/tomcat8/webapps/pprodi.war'
+           }
+
     }
+
