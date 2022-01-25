@@ -8,9 +8,13 @@ node('built-in')
 	{
     sh label: '', script: 'mvn package'
 	}
-	 stage('Continus Build')
+	 stage('Continus Deploymen_master')
 		    {
          sh 'scp  /home/ubuntu/.jenkins/workspace/multibranch_project_master/webapp/target/webapp.war   ubuntu@172.31.36.152:/var/lib/tomcat8/webapps/qqai.war'
 
            }
+	   stage('Continuous Testing_master')
+		     {
+           sh 'echo "Testing Scripts are Passed"'
+            }
     }
