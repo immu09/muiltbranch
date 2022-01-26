@@ -15,7 +15,7 @@
            }
            stage('Continuous Testing_loans')
                      {
-           sh 'echo "Testing Scripts are Passed"'
+           sh 'echo "All Testing Scripts are Passed"'
                }
 stage('Continuous Delivery_loans')
                         {
